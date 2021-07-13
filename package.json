@@ -1,16 +1,15 @@
 {
-    "name": "basic-express",
+    "name": "swagger_practice",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon --exec babel-node src/init.js --delay 2"
+        "start": "nodemon --exec babel-node src/index.js --delay 2"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "@babel/polyfill": "^7.11.5",
-        "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "nodemon": "^2.0.4"
     },
@@ -22,6 +21,8 @@
         "eslint": "^7.30.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
-        "prettier": "^2.3.2"
+        "prettier": "^2.3.2",
+        "swagger-jsdoc": "^6.1.0",
+        "swagger-ui-express": "^4.1.6"
     }
 }
