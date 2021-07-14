@@ -3,6 +3,7 @@ const swaggerUi = require('swagger-ui-express')
 
 const usersRouter = require('./routers/usersRouter')
 const apiSpecification = require('./openapi-sample.json')
+// ! 위의 apiSpecification은 공식 문서에서 제공하는 샘플입니다.
 
 const app = express()
 const PORT = 5000
