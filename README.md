@@ -1,4 +1,6 @@
 # Swagger_practice
 Swagger with Express
-- using JSON file
-- with swagger-ui-express
+- using YAML file
+- with 
+  - swagger-ui-express
+  - yamljs
