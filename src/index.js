@@ -8,11 +8,6 @@ const apiSpecification = require('./openapi-sample.json')
 const app = express()
 const PORT = 5000
 
-// ! console.log [Object]
-// ! reference: https://stackoverflow.com/questions/10729276/how-can-i-get-the-full-object-in-node-jss-console-log-rather-than-object
-// const util = require('util')
-// console.log(util.inspect(apiSpecification, { showHidden: false, depth: null }))
-
 app.use(express.json())
 
 app.use(
