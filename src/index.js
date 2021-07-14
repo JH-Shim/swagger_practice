@@ -1,12 +1,10 @@
 const express = require('express')
 const swaggerUi = require('swagger-ui-express')
-const swaggerJsdoc = require('swagger-jsdoc')
 
 const usersRouter = require('./routers/usersRouter')
-const swaggerOptions = require('./swaggerOptions')
+const apiSpecification = require('./openapi-sample.json')
 
 const app = express()
-const apiSpecification = swaggerJsdoc(swaggerOptions)
 const PORT = 5000
 
 // ! console.log [Object]
@@ -25,3 +23,17 @@ app.use(
 app.use('/users', usersRouter)
 
 app.listen(PORT, () => console.log(`Listening on: http://localhost:${PORT}`))
+
+// ! cookie testing. 이 프로젝트와 전혀 관련이 없는 부분입니다.
+// const cookieParser = require('cookie-parser')
+// app.use(cookieParser())
+//
+// app.get('/testing', (req, res) => {
+//     console.log('headers.cookie: ', req.headers.cookie)
+//     console.log('cookies :', req.cookies)
+//
+//     res.cookie('cookie1', 'success2')
+//     res.cookie('cookie2', 'success2')
+//     // res.clearCookie('cookie1').clearCookie('cookie2')
+//     res.json('OK')
+// })
