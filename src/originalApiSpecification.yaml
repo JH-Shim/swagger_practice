@@ -1,0 +1,61 @@
+openapi: '3.0.0'
+
+info:
+  title: Swagger with Express
+  description: 'practice Swagger with JH-Shim'
+  version: 1.0.0
+
+servers:
+- url: 'http://localhost:5000'
+
+tags:
+- name: users
+  description: http://localhost:5000/users
+
+paths:
+  /users:
+    get:
+      summary: read all Users
+      tags: # [users]
+      - users
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/User'
+    post:
+      summary: create a User
+      tags: [users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/schemas/User'
+      responses:
+        "201":
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/User'
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - name
+        - email
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+          description: Email for the user, needs to be unique
+      example:
+        name: milan
+        email: milan@email.com
